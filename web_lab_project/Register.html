@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href=__dirname+'/web lab project/phome.html'>
+        <style>
+        
+        
+        </style>
+    <body>
+        <form class="box" action="/main" method="POST">
+            <h1>Register</h1>
+            <input type="text" placeholder="UserName" name='name'></input>
+            <input type="email" placeholder="E mail" name='email'></input>
+            <input type="tel" placeholder="Mobile Number" name='mobno'></input>
+            <input type="password" placeholder="Password" name='password'></input>
+            <input type="password" placeholder="Confirm Password" name='conpass'></input>
+            <input type="submit"></input>
+            <h5>Already have an account?</h5>
+            <input type="button" onClick="parent.location='/signin'" value="Login"></input>
+        </form>
+    </body>

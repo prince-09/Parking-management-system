@@ -1,0 +1,103 @@
+<html>
+    <head>
+       <!-- <link rel="stylesheet" href="stylelogin.css">-->
+        <style>
+            body{
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("projectimage1.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.box{
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    border: 2px solid black;
+    background-color: black;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.box h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+}
+.box h5{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+}
+.box input[type="text"],.box input[type="password"],.box input[type="tel"],.box input[type="email"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(146, 129, 161);
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus,.box input[type="tel"]:focus,.box input[type="email"]:focus{
+    width: 280px;
+
+}
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid blueviolet;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type="submit"]:hover
+{
+    background: #2ecc71;
+}
+.box input[type="button"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(226, 8, 8);
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type="button"]:hover
+{
+    background: blue;
+}
+        </style>
+    </head>
+    <body>
+        <form class="box" action="/signin/main" method="POST">
+            <h1>Login</h1>
+            <input type="text" placeholder="UserName"></input>
+            <input type="password" placeholder="Password"></input>
+            <input type="submit"></input>
+            <h5>Don't have an account?</h5>
+    <!--        <input type="button" onClick="parent.location='/'" value="Register"></input>-->
+        </form>
+    </body>
