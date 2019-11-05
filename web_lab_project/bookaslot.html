@@ -1,0 +1,180 @@
+<html>
+
+    <head>
+        <style>
+          
+    body{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("https://github.com/prince-09/files/blob/master/web_lab_project/projectimage1.jpg?raw=true");
+    
+        background-size: cover;
+        background-position: center;
+    }
+    ul{
+        float: right;
+        list-style-type: none;
+        margin-top: 25px;
+    }
+    ul li{
+        display: inline-block;
+    }
+    ul li a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        transition: 0.6s ease;
+    }
+    ul li a:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    ul li a.active{
+        background-color: #fff;
+        color: #000;
+    }
+    .logo img{
+        float: left;
+        width : 70px;
+        height: 70px;
+        margin-top: 25px;
+        border-radius: 4px;       
+    }
+    
+    .about{ 
+        margin-top: 150px;
+        border: 2pt solid white;
+        background-color: white;
+        width: 900px;
+        border-radius: 20px;
+        margin-right: 250px;
+    }
+    .Title{
+        padding: 20px;
+        color: blue;
+        font-size: 35px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    .desc{
+        padding: 25px;
+        color: black;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .form{
+     margin-left: 455px;   
+     padding: 15px;
+     border: 1px solid white;
+     border-radius: 20px;
+     width: 450px;
+    }
+    .edit{
+        margin-left: 20px;
+        color: white;
+    }
+    #btn{
+        margin-top: 40px;
+        margin-left: 130px;
+        width: 100px;
+        height: 30px;;
+    }
+    #fill{
+        margin-top: 120px;
+        margin-left: -200px;
+        color: whitesmoke;
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    #name{
+        margin-left: 120px;padding: 3px;
+         background-color:rgba(0, 0, 0, 0);
+        color:white;
+        border: none;
+        outline:none;
+        border-bottom: 1px solid white;
+    }
+    #mob{
+        margin-left: 110px;padding: 3px;margin-top: 30px; background-color:rgba(0, 0, 0, 0);
+                    color:white;
+                    border: none;
+                    outline:none;
+                    border-bottom: 1px solid white;
+    }
+    #mail{
+        margin-left: 110px;padding: 3px;margin-top: 20px; background-color:rgba(0, 0, 0, 0);
+                   color:white;
+                   border: none;
+                   outline:none;
+                   border-bottom: 1px solid white;
+    }
+    #nameofparks{
+        width: 160px;
+    }
+    #loc{
+        margin-left: 15px;padding: 3px;margin-top: 30px; background-color:rgba(0, 0, 0, 0);
+                   color:white;
+                   border: none;
+                   outline:none;
+                   border-bottom: 1px solid white;
+    }
+    #hours{
+        margin-left: 50px;padding: 3px;margin-top: 30px; background-color:rgba(0, 0, 0, 0);
+                    color:white;
+                    border: none;
+                    outline:none;
+                    border-bottom: 1px solid white;
+    }
+    ul li a.active{
+    background-color: #fff;
+    color: #000;
+}
+            </style>
+            <script>
+                
+                var nameofparks=parks;
+                var location=location;
+                var sum=0;
+                
+                function tick(){     
+                var s=document.getElementById("nameofparks").value;
+                var loc=document.getElementById('loc');
+                for(var i=0;i<nameofparks.length;i++){
+                    if(nameofparks[i]==s){
+                        loc.value=location[i];
+                    }
+                }
+            }
+        
+            </script>
+    
+    </head>
+    <body>
+                        <div class="logo">
+                            <img src="https://github.com/prince-09/files/blob/master/web_lab_project/projectImage.jpg?raw=true" >
+                        </div>
+                <ul>
+                    <li><a href="/main">Home</a></li>
+                    <li><a class="active" href="/book">Book a Parking slot</a></li>
+                    <li><a href="/">Sign Out</a></li>
+                    <li><a href="/nearsearch">See Nearby Parking Slots</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                    <h4 id="fill">Fill the details of your booking</h4>
+                </ul><br><br><br><br><br><br><br><br><br><br><br><br>
+                <form class="form" action="/book" method="POST"><br>
+                    <label class="edit">Name : </label><input type="text" id="name"><br>
+                    <label class="edit">  Mobile : </label> <input type="tel" id="mob"><br>
+                   <label class="edit"> E Mail : </label><input type="email" id="mail"><br><br>
+                   <label class="edit">Name of Parking location : </label><select onclick="tick()" id="nameofparks" name="">
+                    <option value="CSE">CSE</option>
+                    <option value="Mjshcshd">Mechanical</option>
+                    <option value="sjhsh">Civil</option>
+                </select><br>
+                   <label class="edit"> Location of Parking lot : </label><input type="text" id="loc"><br>
+                   <label class="edit"> Number of Hours : <input type="tel" id="hours"><br>
+                   
+                    <input type="submit" value="Submit" id="btn">
+                </form>
+    </body>
+
+</html>
