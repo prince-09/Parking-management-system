@@ -1,0 +1,177 @@
+<html>
+
+    <head>
+        <style>
+          
+    body{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("https://github.com/prince-09/files/blob/master/web_lab_project/projectimage1.jpg?raw=true");
+    
+        background-size: cover;
+        background-position: center;
+    }
+   
+    .flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: 100px;
+  border: 1px solid #f1f1f1;
+  border-radius: 20px; 
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card2 {
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  margin-top: -300px;
+  margin-left: 900px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; 
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; 
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: yellow;
+  color: black;
+  border-radius: 20px; 
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 20px; 
+  transform: rotateY(180deg);
+}
+.flip-card2-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card2:hover .flip-card2-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card2-front, .flip-card2-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card2-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card2-back {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+  transform: rotateY(180deg);
+}
+#first{
+    margin-top: 100px;margin-left: 650px;font-size: 20px;color: beige;
+    border: 1px;
+    padding: 20px;;
+    width: 500px;
+    border-radius: 50px;
+    transition: 0.6s ease;
+    height: 100px;
+}
+#first:hover{
+    background-color: white;
+    color: #000;
+    width: 500px;
+    height: 60px;;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    margin-left: 700px;
+    margin-top: 20px;
+    margin-bottom: -50px;
+    border-radius: 50px;
+}
+    #car{
+      width: 400px;
+      height: 300px;
+      margin-top: -300px;
+      margin-left: 900px;
+    }
+</style>
+    
+    </head>
+    <body>
+            <img id="logo" src="https://github.com/prince-09/files/blob/master/web_lab_project/projectImage.jpg?raw=true" >
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" >
+                  <br><br><br><br><br><br>
+                <label style="margin-top: 500px;font-size: 40px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Our Vision...</label>
+              </div>
+              <div class="flip-card-back">
+                  <br><br>
+                <label style="padding: 10px;font-size: 20px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> Parking of vehicle is always an issue when it comes to managing a road of metropoliticain city or a busy road.<br>
+                    It becomes hectic and so much time and energy consuming when we have to go and find the parking slot for parking and sometimes leads to jam when somebody uses unauthorized parking location
+                    We have tried to provide a solution to these problems by iving a simple <br>parking management system which allows user to book a parking slot in advance at their favourite parking lot<br>
+                    User can also track the availaibilty of an parking slot.</label>
+              </div>
+            </div>
+          </div>    
+         <!-- <div class="flip-card2">
+                <div class="flip-card2-inner">
+                  <div class="flip-card2-front" style="background-color: palevioletred">
+                      <br><br><br><br><br><br>
+                    <label style="margin-top: 500px;font-size: 40px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Our Aim...</label>
+                  </div>
+                  <div class="flip-card2-back">
+                      <br><br><br><br>
+                    <label style="padding: 10px;font-size: 25px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+                    
+                        We want a patna tha is hassle free ,jam free.<br>So that people can devote more of their time in their precious work
+                    </label>  
+                  </div>
+                </div>
+              </div>  -->
+              <img id="car" src="car.jpg">
+              <br><br><br><br><br><br>
+              <label id="first" onclick="parent.location='/home'" >Continue to the site</label>  
+    </body>
+
+</html>
