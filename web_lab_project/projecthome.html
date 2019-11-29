@@ -1,7 +1,140 @@
 <html>
 
     <head>
-        <link rel="stylesheet" type="text/css" href="style1.css">
+       <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("https://github.com/prince-09/files/blob/master/web_lab_project/projectimage1.jpg?raw=true");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: -90px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+ul li a.active{
+    background-color: #fff;
+    color: #000;
+}
+.logo img{
+    float: left;
+    width : 70px;
+    height: 70px;
+    margin-top: 25px;
+    border-radius: 4px;
+    
+}
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+.flip-card {
+    background-color: transparent;
+    width: 1300px;
+    height: 250px;
+    padding-top: 300px;
+    padding-left: 120px;
+    
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+ /* #flipimg{
+    margin-top: 200px;
+  }
+  .f{
+      margin-top: 200px;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: transparent;
+    color: black;
+    border: 1px solid white;
+    border-radius: 20px;
+    
+  }
+  .flip-card-front h2{
+      color: antiquewhite;
+      font-size: 50px;
+      margin-top: 100px;      
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: transparent;
+    color: white;
+    transform: rotateX(180deg);
+  }
+  .lih{
+      margin-top: 200px;
+      margin-right: 400px;
+      border: 1px;
+      padding: 20px;
+      width: 700px;
+      height: 300px;
+      transition: 0.6s ease;
+   
+  }
+  .lih:hover{
+      background-color: blue;
+
+  }
+  #head{
+      margin-top: 10px;
+      margin-left: 280px;
+      font-size: 30px;
+      color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  #cont{
+      margin-top: 30px;
+      font-size: 18px;
+      margin-left: 80px;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+        </style>
 
     </head>
     <body>
@@ -9,20 +142,29 @@
             
             <div class="main">
                     <div class="logo">
-                            <img src="projectImage.jpg" >
+                            <img src="https://github.com/prince-09/files/blob/master/web_lab_project/projectImage.jpg?raw=true" >
                         </div>
                 <ul>
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="#">Book a Parking slot</a></li>
-                    <li><a href="#">Sign Out</a></li>
-                    <li><a href="map.html">See Nearby Parking Slots</a></li>
-                    
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a class="active" href="/main">Home</a></li>
+                    <li><a href="/book">Book a Parking slot</a></li>
+                    <li><a href="/nearsearch">See Nearby Parking Slots</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/">Sign Out</a></li>
                 </ul>
             </div>
-            <div class="flip-card">
-                    <div class="flip-card-inner">
+
+            <ul class="lih">
+                <li id="head">Our Vision</li><br><br>
+                <li id="cont">
+                        WELCOME TO OUR WEBSITE.....<br><br>
+                        Our aim is to give our users ease in parking their vehicles.<br><br>
+                        We provide our user the nearest parking lot around their current location.
+                </li>
+            </ul>
+            
+                 <!--   <div class="flip-card-inner">
                       <div class="flip-card-front">
                        <h2>Our Vision</h2>
                       </div>
@@ -34,9 +176,10 @@
                             </h2>
                       </div>
                     </div>
-                  </div>
+                  </div>-->
            
         </header>
+        
         
     </body>
 

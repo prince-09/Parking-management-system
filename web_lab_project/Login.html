@@ -5,7 +5,7 @@
             body{
     margin: 0;
     padding: 0;
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("projectimage1.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("https://github.com/prince-09/files/blob/master/web_lab_project/projectimage1.jpg?raw=true");
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -92,12 +92,14 @@
         </style>
     </head>
     <body>
-        <form class="box" action="/signin/main" method="POST">
+        <form class="box" action="/logi" method="POST">
             <h1>Login</h1>
-            <input type="text" placeholder="UserName"></input>
-            <input type="password" placeholder="Password"></input>
+            <input type="text" placeholder="UserName" name="name"></input>
+            <input type="password" placeholder="Password" name="password"></input>
             <input type="submit"></input>
             <h5>Don't have an account?</h5>
-    <!--        <input type="button" onClick="parent.location='/'" value="Register"></input>-->
+            <input type="button" onClick="parent.location='/signup'" value="Register"></input>
+            
         </form>
+        
     </body>

@@ -1,0 +1,325 @@
+<html>
+
+    <head>
+        <script>
+                var decodedCooki = decodeURIComponent(document.cookie);
+                var decodedCookie=decodedCooki.split(';');
+                var count=1;
+            
+                console.log(decodedCookie);
+                
+                document.onreadystatechange = () => {
+                    if (document.readyState === 'complete') {
+                        console.log('DOM is ready.')
+                        for(var i=0;i<decodedCookie.length;i++){
+                            var cookarr=decodedCookie[i].split('=');
+                            if(decodedCookie[i].includes("name")){
+                                var name=document.getElementById('name');
+                                name.innerHTML=cookarr[1];
+                            }
+                            if(decodedCookie[i].includes("mail")){
+                                var name=document.getElementById('mail');
+                                name.innerHTML=cookarr[1];
+                            }
+                            if(decodedCookie[i].includes("phon")){
+                                var name=document.getElementById('num');
+                                name.innerHTML=cookarr[1];
+                            }
+                            if(decodedCookie[i].includes("add")){
+                                var name=document.getElementById('add');
+                                name.innerHTML=cookarr[1];
+                            }
+                            if(decodedCookie[i].includes("tov")){
+                                var name=document.getElementById('tov');
+                                name.innerHTML=cookarr[1];
+                            }
+                            /*if(decodedCookie[i].includes("data")){
+                                var ul = document.getElementById("list");
+                                var li = document.createElement("li");
+                                var cook=cookarr[1].split(',');
+                                li.setAttribute('id',"Name of Parking lot "+cook[0]);
+                                li.appendChild(document.createTextNode("Name of Parking lot "+cook[0]));
+                                ul.appendChild(li);
+                                var li1 = document.createElement("li");
+                                li1.setAttribute('class',"hr");
+                                li1.appendChild(document.createTextNode("\n Hours "+cook[1]));
+                                ul.appendChild(li1);
+                                
+                            }*/
+                            if(decodedCookie[i].includes("data")){
+                                var u=document.getElementById("n"+count);
+                                var cook=cookarr[1].split(',');
+                                u.innerHTML=cook[0];
+                                var g=document.getElementById("hr"+count);
+                                g.innerHTML=cook[1];
+                                count++;
+                            }
+                        }
+                        
+                            
+                          //  var candidate = document.getElementById("candidate");
+                            
+                            
+                            
+                           
+                    }
+                    
+                };
+        </script>
+        <style>
+            .h{
+                margin-left: 100px;
+            }
+            .l{
+                margin-left: 50px;
+            }
+          
+    body{
+        background-image:linear-gradient(rgba(0.925, 0, 0, 0.900),rgba(0, 0, 0, 0.829)) ,url("https://github.com/prince-09/files/blob/master/web_lab_project/projectimage1.jpg?raw=true");
+        background-size: cover;
+        background-position: center;
+    }
+    ul{
+        float: right;
+        list-style-type: none;
+        margin-top: 25px;
+    }
+    ul li{
+        display: inline-block;
+    }
+    ul li a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        transition: 0.6s ease;
+    }
+    ul li a:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    ul li a.active{
+        background-color: #fff;
+        color: #000;
+    }
+    .logo img{
+        float: left;
+        width : 70px;
+        height: 70px;
+        margin-top: 25px;
+        border-radius: 4px;       
+    }
+    
+    .about{ 
+        margin-top: 150px;
+        border: 2pt solid white;
+        background-color: white;
+        width: 900px;
+        border-radius: 20px;
+        margin-right: 250px;
+    }
+    .Title{
+        padding: 20px;
+        color: blue;
+        font-size: 35px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    .desc{
+        padding: 25px;
+        color: black;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #con{
+        padding-top: 100px;
+        margin-left: 200px;
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: floralwhite;
+    }
+    .form{
+        margin-top: -300px;
+        border: 1px solid white;
+        padding: 10px;
+        background-color: white;
+        margin-left: 100px;
+        width: 500px;
+        height: 300px;
+        
+    }
+    #locimg{
+        width: 200px;
+        height: 200px;
+    }
+    #nameedit{
+        margin-left: 100px;
+        background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid black;
+        margin-top: 30px;
+        padding: 3px;
+       
+    }
+    #mailedit{
+        margin-left: 90px;
+        margin-top: 40px;
+        background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid black;
+        padding: 3px;
+    }
+    #mobedit{
+        margin-left: 30px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid black;
+        padding: 3px;
+    }
+    .tag{
+        margin-left: 100px;
+       
+    }
+    #loc{
+       margin-left: 350px;
+       font-size: 20px;
+       color: bisque;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    #locimg{
+        margin-left: 700px;
+        width: 300px;
+        height: 300px;
+
+    }
+    #submit{
+        margin-left: 200px;
+        width: 100px;
+        height: 30px;
+        color:black;
+        background-color: blue
+    }
+    .content{
+        padding-left: 150px;
+        
+    }
+    .item{
+        height: 50px;
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #profile{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color:skyblue;
+        margin-left: 40px;
+    }
+    #tble{
+        margin-left: 90px;
+        color: white;
+        
+    }
+    div.ex3 {
+  background-color: lightblue;
+  width: 500px;
+  height: 300px;
+  margin-top: -280px;
+  margin-left: 850px;
+  overflow-y: auto;
+}
+#list{
+    margin-right: 270px;
+    margin-left: -700px;
+
+}
+.hr{
+    display: block;
+}
+
+     
+      
+        </style>
+    
+    </head>
+    <body>
+            <div class="logo">
+                    <img src="https://github.com/prince-09/files/blob/master/web_lab_project/projectImage.jpg?raw=true" >
+                </div>
+                <ul>
+                    <li><a href="/main">Home</a></li>
+                    <li><a href="/book">Book a Parking slot</a></li>
+                    <li><a href="/">Sign Out</a></li>
+                    <li><a href="/nearsearch">See Nearby Parking Slots</a></li>
+                    <li><a class="active"  href="/profile">Profile</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul><br><br><br><br><br><br><br>
+                <h1 id="profile">Profile</h1>
+                <table id="tble">
+                    <th>
+                        
+                    </th>
+                    <tr class="item">
+                        <td>
+                            Name
+                        </td>
+                        <td class="content" id="name">
+                            Prince sinha
+                        </td>
+                    </tr>
+                    <tr class="item">
+                        <td>
+                            E mail
+                        </td>
+                        <td class="content" id="mail">
+                            prfjdn@ssl.shh
+                        </td>
+                    </tr><tr class="item">
+                        <td>
+                            mobile number
+                        </td>
+                        <td class="content" id="num">
+                            556564565665
+                        </td>
+                    </tr><tr class="item">
+                        <td>
+                            Type of vehicle
+                        </td>
+                        <td class="content" id="tov">
+                            Two wheeler
+                        </td>
+                    </tr><tr class="item">
+                        <td>
+                            Address
+                        </td>
+                        <td class="content" id="add">
+                            ]kjhhhkvvkkkhbkhhvjgcg bhj
+                        </td>
+                    </tr>
+                    
+                </table>
+                <div class="ex3">
+                    <ul id="list">
+                        <label  style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >Name of Park</label><li class="l" id="n1"></li><br>
+                        <label  style="margin-top: 50dp">Hours</label><li class="h" id="hr1"></li><br><br><br>
+                        <label  style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >Name of Park</label><li class="l" id="n2"></li><br>
+                        <label  style="margin-top: 50dp">Hours</label><li class="h" id="hr2"></li><br><br><br>
+                        <label  style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >Name of Park</label><li class="l" id="n3"></li><br>
+                        <label  style="margin-top: 50dp">Hours</label><li class="h" id="hr3"></li> <br><br><br>
+                        <label  style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >Name of Park</label><li class="l" id="n4"></li><br>
+                        <label  style="margin-top: 50dp">Hours</label><li id="hr1" class="h"></li> <br><br><br>
+                        <label  style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >Name of Park</label><li class="l" id="n1"></li><br>
+                        <label  style="margin-top: 50dp">Hours</label><li id="hr1" class="h"></li> <br><br><br>
+                        
+                    </ul>
+                    </div>
+            </body>
+
+</html>
